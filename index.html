@@ -31,9 +31,12 @@
                 z-index: 9999;
             }
 
+            .loader_div {
+                margin-top: 200px;
+            }
+
             .loader {
                 width: 200px;
-                margin-top: 200px;
             }
 
             .container {
@@ -46,6 +49,10 @@
                 padding: 0px 300px;
                 display: table-cell;
                 vertical-align: middle;
+            }
+
+            .hide {
+                display: none;
             }
 
             .container_data h1 {
@@ -102,8 +109,8 @@
 
         <script type="text/javascript">
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Mobile|Opera Mini/i.test(navigator.userAgent)) {
-                document.getElementById('load_gif').style.display = 'none';
-                document.getElementById('mobile_prompt').innerHTML = "WOW! Seems like you're using a mobile. This website is just a UI Design Concept and works best on Laptop/Computers.";
+                document.getElementById('load_gif').classList.add('hide');
+                document.getElementById('mobile_prompt').classList.remove('hide');
             } else {
                 window.onload = function() {
                     document.getElementById('loading_mask').style.display = 'none';
@@ -117,8 +124,11 @@
 
         <div id="loading_mask">
             <center>
+                <div class="loader_div"></div>
                 <img src="load.gif" class="loader" id="load_gif">
-                <p class="oh_look_large" id="mobile_prompt"></p>
+                <p class="oh_look_large hide" id="mobile_prompt">
+                    WOW! Seems like you're using a mobile. This website is just a UI Design Concept and works best on Laptop/Computers.
+                </p>
             </center>
         </div>
 
