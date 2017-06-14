@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Periscope</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+        <style media="screen">
+            body {
+                color: #8f8f8f;
+            }
+
+            .container {
+                height: 100vh;
+                width: 100%;
+                display: table;
+            }
+
+            .container_data {
+                padding: 0px 300px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .container_data h1 {
+                color: #000000;
+                font-family: 'Playfair Display', serif;
+                text-align: center;
+            }
+
+            .description {
+                font-family: 'Roboto Mono', monospace;
+                text-align: justify;
+            }
+
+            .cta {
+                margin-top: 200px;
+                font-family: 'Roboto Mono', monospace;
+                text-align: center;
+            }
+
+            .oh_look {
+                font-family: 'Roboto Mono', monospace;
+                text-align: center;
+            }
+
+            .peroscope {
+                width: 400px;
+                height: 400px;
+                border-radius: 50%;
+                background-color: #101010;
+                margin: 0 auto;
+                background-image: url('bg.jpg');
+                background-position: center 0px;
+                background-attachment: fixed;
+                background-repeat: repeat-y;
+                border: 2px solid #ffffff;
+            }
+
+            .heart {
+                color: red;
+            }
+
+            .anchor {
+                color: #000000;
+            }
+
+            .padding_bottom {
+                padding-bottom: 1000px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="container_data">
+                <h1>Periscope Parallax Concept</h1>
+                <p class="description">It’s a cold winter day. Your are the Chief Security Officer at a Submarine. Your submarine is about to surface. But before that, your Captain orders you to see if it is safe. So you fire up the old periscope that let’s you see the world
+                    outside your submarine. </p>
+                <p class="cta">Scroll down!</p>
+            </div>
+        </div>
+
+        <!-- PERISCOPE -->
+        <div class="peroscope"></div>
+
+        <div class="container">
+            <div class="container_data">
+                <p class="oh_look">Oh look! A Jelly Fish!</p>
+                <p class="oh_look">Made with <span class="heart">❤</span> by <a class="anchor" href="http://fahad.feedbot.net">Fahad A. Chaudhry</a></p>
+                <p class="oh_look">Find the code on <a class="anchor" href="http://fahad.feedbot.net">Github</a></p>
+            </div>
+        </div>
+    </body>
+
+</html>
