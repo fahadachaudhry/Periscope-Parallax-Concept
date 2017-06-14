@@ -8,7 +8,8 @@
         <link rel="image_src" href="https://fahadachaudhry.github.io/Periscope-Parallax-Concept/bg.jpg" />
         <meta property="og:title" content="Periscope Parallax Concept" />
         <meta property="og:url" content="https://fahadachaudhry.github.io/Periscope-Parallax-Concept/" />
-        <meta property="og:description" content="It’s a cold winter day. Your are the Chief Security Officer at a Submarine. Your submarine is about to surface. But before that, your Captain orders you to see if it is safe. So you fire up the old periscope that let’s you see the world outside your submarine." />
+        <meta property="og:description" content="It’s a cold winter day. Your are the Chief Security Officer at a Submarine. Your submarine is about to surface. But before that, your Captain orders you to see if it is safe. So you fire up the old periscope that let’s you see the world outside your submarine."
+        />
 
 
         <title>Periscope Parallax Concept</title>
@@ -69,8 +70,8 @@
                 text-align: center;
             }
 
-            .oh_look_large{
-              font-size: 24px;
+            .oh_look_large {
+                font-size: 24px;
             }
 
             .peroscope {
@@ -100,8 +101,13 @@
         </style>
 
         <script type="text/javascript">
-            window.onload = function() {
-                document.getElementById('loading_mask').style.display = 'none';
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Mobile|Opera Mini/i.test(navigator.userAgent)) {
+                document.getElementById('load_gif').style.display = 'none';
+                document.getElementById('mobile_prompt').innerHTML = "WOW! Seems like you're using a mobile. This website is just a UI Design Concept and works best on Laptop/Computers.";
+            } else {
+                window.onload = function() {
+                    document.getElementById('loading_mask').style.display = 'none';
+                }
             }
         </script>
 
@@ -110,7 +116,10 @@
     <body>
 
         <div id="loading_mask">
-            <center><img src="load.gif" class="loader"></center>
+            <center>
+                <img src="load.gif" class="loader" id="load_gif">
+                <p class="oh_look_large" id="mobile_prompt"></p>
+            </center>
         </div>
 
         <div class="container">
