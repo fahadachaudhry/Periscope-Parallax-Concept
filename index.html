@@ -3,13 +3,36 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Periscope</title>
+
+        <meta property="og:image" content="img/og.png">
+        <link rel="image_src" href="https://fahadachaudhry.github.io/Periscope-Parallax-Concept/bg.jpg" />
+        <meta property="og:title" content="Periscope Parallax Concept" />
+        <meta property="og:url" content="https://fahadachaudhry.github.io/Periscope-Parallax-Concept/" />
+        <meta property="og:description" content="It’s a cold winter day. Your are the Chief Security Officer at a Submarine. Your submarine is about to surface. But before that, your Captain orders you to see if it is safe. So you fire up the old periscope that let’s you see the world outside your submarine." />
+
+
+        <title>Periscope Parallax Concept</title>
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
         <style media="screen">
             body {
                 color: #8f8f8f;
+            }
+
+            #loading_mask {
+                background-color: white;
+                height: 100%;
+                left: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 9999;
+            }
+
+            .loader {
+                width: 200px;
+                margin-top: 200px;
             }
 
             .container {
@@ -46,6 +69,10 @@
                 text-align: center;
             }
 
+            .oh_look_large{
+              font-size: 24px;
+            }
+
             .peroscope {
                 width: 400px;
                 height: 400px;
@@ -72,14 +99,25 @@
             }
         </style>
 
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('loading_mask').style.display = 'none';
+            }
+        </script>
+
     </head>
 
     <body>
+
+        <div id="loading_mask">
+            <center><img src="load.gif" class="loader"></center>
+        </div>
+
         <div class="container">
             <div class="container_data">
                 <h1>Periscope Parallax Concept</h1>
-                <p class="description">It’s a cold winter day. Your are the Chief Security Officer at a Submarine. Your submarine is about to surface. But before that, your Captain orders you to see if it is safe. So you fire up the old periscope that let’s you see the world
-                    outside your submarine. </p>
+                <p class="description">It’s a cold winter day. Your are the Chief Security Officer at a Submarine. Your submarine is about to surface. But before that, your Captain orders you to see if it is safe. So you open up the old periscope that let’s you see the world
+                    outside your submarine.</p>
                 <p class="cta">Scroll down!</p>
             </div>
         </div>
@@ -89,7 +127,7 @@
 
         <div class="container">
             <div class="container_data">
-                <p class="oh_look">Oh look! A Jelly Fish!</p>
+                <p class="oh_look oh_look_large">Oh look! A Jelly Fish!</p>
                 <p class="oh_look">Made with <span class="heart">❤</span> by <a class="anchor" href="http://fahad.feedbot.net">Fahad A. Chaudhry</a></p>
                 <p class="oh_look">Find the code on <a class="anchor" href="http://fahad.feedbot.net">Github</a></p>
             </div>
